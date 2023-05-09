@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexADMIN.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/miacake-logo-web-01.png">
+        <h4><i>Trang Quản lý danh sách sản phẩm , người dùng</i></h4>
+        <div class="menu">
+            <div>
+                <a href="#">Trang chủ</a>
+            </div>
+            <div>
+                <a href="#">Chăm sóc khách hàng</a>
+            </div>
+            <div>
+                <a href="#">Tin nhắn <i class="fa-solid fa-user fa-flip" style="color: #ff0000;"></i></a>
+            </div>
+            <div>
+
+                <a href="#">Xin chào ADMIN !!!<i class="fa-sharp fa-solid fa-envelopes-bulk fa-bounce"
+                        style="color: #ff0000;"></i></a>
+            </div>
+            <div>
+
+                <a href="#">LOGOUT<i class="fa-solid fa-right-from-bracket fa-beat" style="color: #ff0000;"></i></a>
+            </div>
+        </div>
+    </header>
+    <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+                type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><a href="indexADMIN.html">Quản lí sản phẩm</a></button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+                type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Quản lí sản phẩm</button>
+        </div>
+        <br>
+        <br>
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+                tabindex="0">
+               
+                <form id="form-search">
+                    <input type="text" id="input-search" placeholder="search...." oninput="handleSearch(this.value)">
+
+                </form>
+                <br>
+                <h3><i>Danh sách người dùng</i></h3>
+                <table class="IdTable" cellpadding="20">
+                    <div class="IdTable-header">
+                        <thead>
+                            <tr id="IdUsers">
+                                <th>STT</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Hình ảnh</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>CARAMEL AND CHOCOLATE</td>
+                                <td><img src="./images_product/product_1.webp" alt="" width="20%"></td>
+                                <td>630000<spun>đ</spun>
+                                </td>
+                                <td>
+
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+        </div>
+        <!-- <div id="formAdd" class="animate-2">
+            <h3 class="titleforAdd">THÊM MỚI SẢN PHẨM</h3>
+            <div class="gird">
+                <input type="number" name="" id="idAdd" name="id" style="width: 40px;" hidden />
+            </div>
+            <div class="gird">
+                <label for="">Hình ảnh sản phẩm:</label>
+                <input type="file" name="" id="imageAdd" name="image" />
+            </div>
+            <div class="gird">
+                <label for="">Tên sản phẩm:</label>
+                <input type="text" name="" id="nameEdit" name="name" />
+            </div>
+
+            <div class="gird">
+                <label for="">Phân loại:</label>
+                <input type="text" name="" id="classifyAdd" name="classify" />
+            </div>
+
+            <div class="gird">
+                <label for="">Giá sản phẩm:</label>
+                <input type="text" name="" id="priceAdd" name="price" />
+            </div>
+            <div class="flex">
+                <input type="submit" value="Thếm sản phẩm" onclick="handleAdd">
+            </div>
+        </div> -->
+        <div id="formEdit" class="animate">
+            <h3 class="titleforAdd">CHỈNH SỬA SẢN PHẨM</h3>
+            <div class="gird">
+                <input type="number" name="" id="idEdit" name="id" style="width: 40px;" hidden />
+            </div>
+            <div class="gird">
+                <label for="">Hình ảnh sản phẩm:</label>
+                <input type="file" name="" id="imageEdit" name="image" />
+            </div>
+            <div class="gird">
+                <label for="">Tên sản phẩm:</label>
+                <input type="text" name="" id="nameEdit" name="name" />
+            </div>
+
+            <div class="gird">
+                <label for="">Phân loại:</label>
+                <input type="text" name="" id="classifyEdit" name="classify" />
+            </div>
+
+            <div class="gird">
+                <label for="">Giá sản phẩm:</label>
+                <input type="text" name="" id="priceEdit" name="price" />
+            </div>
+            <div class="flex">
+                <button onclick="handleUpdate()">Update</button>
+                <button onclick="handleEdit()">Cancel</button>
+            </div>
+        </div>
+</body>
+<script src="indexProductADMIN.js"></script>
+<script src="DBproduct.js"></script>
+
+</html>

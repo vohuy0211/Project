@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.reviewProduct {
+    text-align: center;
+}
+#buy-amount button{
+ width: 35px;
+ height: 35px;
+ outline: none;
+ background: none;
+ border: 1px solid #ececec;
+ cursor: pointer;
+}
+#buy-amount input {
+    width: 40px;
+    text-align: center;
+}
+.reviewProduct {
+    display: flex;
+    margin: auto;
+}
+#buy-amount button:hover {
+    background-color: #ececec   ;
+}
+.btn-button {
+    background-color: #3D1A1A;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.btn-button:hover {
+    background-color: #C0C906;
+}
+.btn-button-1 {
+    background-color: #C0C906;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+}
+#reviewCMT {
+    background-color: #96918b;
+}
+#reviewCMT a {
+    text-decoration: none;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color:#3D1A1A;
+    color: white;
+}

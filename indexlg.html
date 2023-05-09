@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-8">
+                    <img src="./images/miacake-logo-web-01.png">
+                </div>
+                <div class="col-sm-4 search-box">
+                    <div class="input-search">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" oninput="handleSearch(this.value)">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+
+    <div class="wrapper">
+        <div class="d-flex p-2 navbar">
+            <div class="container">
+
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">TRANG CHỦ</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="main-menu">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="#">BÁNH SINH NHẬT<i class="fa-solid fa-angle-down fa-shake"
+                                    style="color: #080404;"></i></a>
+                            <ul class="menu-drop">
+                                <li><a href="#">Bánh Sự Kiện</a></li>
+                                <li><a href="#">Bộ Sưu Tập Bánh </a></li>
+                                <li><a href="#">Bánh Theo Yêu Cầu</a></li>
+                                <li><a href="#">Bánh Vẽ</a></li>
+                                <li><a href="#">Bánh In Ảnh</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="menu-item-1">
+                            <a href="#">BÁNH MÌ && BÁNH MẶN<i class="fa-solid fa-angle-down fa-shake"
+                                    style="color: #000000;"></i></a>
+                            <ul class="menu-drop-1">
+                                <li><a href="#">BÁNH MÌ</a></li>
+                                <li><a href="#">BÁNH MẶN</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="menu-item-2">
+                            <a href="#">COOKIES && MINICAKE<i class="fa-solid fa-angle-down fa-shake"
+                                    style="color: #000000;"></i></a>
+                            <ul class="menu-drop-2">
+                                <li><a href="#">COOKIES</a></li>
+                                <li><a href="#">MINICAKE</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-box">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-user fa-flip" style="color:#0c0075;"></i>
+                            <nav>
+                                <div class="logo">
+                                    <img src="./images/logo-huawei.jpg" alt="" width="100" />
+                                </div>
+                                <div class="navbar-feature">
+                                    <div class="user-info"></div>
+                                    <div class="navbar-btn">
+                                       <a href="login.html"> <button class="btn-log-in">Đăng nhập</button></a>
+                                        
+                                       <a href="register.html"> <button class="btn-sign-up">Đăng ký</button></a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="Cart.html" class="cart"><i class="fa-solid fa-cart-plus fa-beat" style="color:#0c0075;"><p id="count">0</p></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="showCart">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="img-logo">
+        <img src="./images/ms_banner_img5.webp" width="100%" id="img-item">
+    </section>
+    <section>
+        <div class="main-header">
+            <h1>Loại bánh phổ biến 2023</h1>
+            <br>
+            <br>
+
+            <i class="fa-solid fa-cake-candles fa-bounce fa-2xl" style="color: #ff00bb;"></i>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section>
+        <div class="container text-center">
+            <div class="row renderProduct" >
+                <!-- <div class="col product">
+                    <img src="./images_product/product_1.webp" width="300px">
+                    <h4><a href="reviewProduct.html">CARAMEL AND CHOCOLATE</a></h4>
+                    <p>ID : BNSN07</p>
+                    <p><span>630000</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div>
+                <div class="col product">
+                    <img src="./images_product/product_2.webp" width="300px">
+                    <h4><a href="#">CARAMEL CHOCOLATE CAKE </a></h4>
+                    <p>ID : BSN011</p>
+                    <p><span>360000</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div>
+                <div class="col product">
+                    <img src="./images_product/product_3.webp" width="300px">
+                    <h4><a href="#">CARAMEL MOIST CHOCOLATE CAKE</a></h4>
+                    <p>ID : BSN011</p>
+                    <p><span>330000</span>đ</p> 
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i
+                            class="fa-solid fa-cart-arrow-down" style="color: #6e2e7f;"></i></button>
+                </div>
+            </div>
+            <br>
+            <div class="row renderProduct">
+                <div class="col product">
+                    <img src="./images_product/product_4.webp" width="300px">
+                    <h4><a href="#">GREEN TEE CAKE</a></h4>
+                    <p>ID : BNSN02</p>
+                    <p><span>660000</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div>
+                <div class="col product">
+                    <img src="./images_product/product_5.webp" width="300px">
+                    <h4><a href="#">HAWAII MOUSSE</a></h4>
+                    <p>ID : BSN09</p>
+                    <p><span>353000</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div>
+                <div class="col product">
+                    <img src="./images_product/product_6.webp" width="300px">
+                    <h4><a href="#">OPERA CHỮ NHẬT</a></h4>
+                    <p>ID : BSN03</p>
+                    <p><span>730000</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div> -->
+            <!-- </div>
+            <br> -->
+            <!-- <div class="row renderProduct">
+                <div class="col product">
+                    <img src="./images_product/product_7.webp" width="300px">
+                    <h4><a href="#">PASSION FRUIT MOUSSE</a></h4>
+                    <p>ID : BSN010</p>
+                    <p><span>360000</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div>
+                <div class="col product">
+                    <img src="./images_product/product_8.webp" width="300px">
+                    <h4><a href="#">PETIT </a></h4>
+                    <p>ID : Petit83-15</p>
+                    <p><span>514000</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div>
+                <div class="col product">
+                    <img src="./images_product/product_9.webp" width="300px">
+                    <h4><a href="#">PETIT</a></h4>
+                    <p>ID : Petit83-14</p>
+                    <p><span>300000</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleCart(this)"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <br>
+    <br>
+    <div class="drop">
+        <h1>TIN TỨC</h1>
+        <h5>NỔI BẬT NHẤT TRONG TUẦN</h5>
+    </div>
+    <div class="container text-center font-list">
+        <div class="row">
+            <div class="col">
+                <img src="./images/footer_1.webp" width="400px">
+                <a href="#">
+                    <h5><i>Bánh nhà gừng - Đón giáng sinh </i></h5>
+                </a>
+                <p> Hình ảnh bánh nhà gừng Noel mang nhiều ý nghĩa. Một mặt, nó được tin là đại diện cho tinh thần ấm
+                </p>
+                <p>áp, thân thuộc của sự đoàn tụ gia đình. Mặt khác, nó gắn liền với truyền thuyết về ngôi nhà bánh kẹo
+                </p>
+                <p>trong truyện Hansel và Gretel, trích từ bộ truyện cổ Grimm, nên sẽ là món quà Giáng Sinh ý nghĩa để
+                </p>
+                <p>dành tặng cho người thân.</p>
+            </div>
+            <div class="col">
+                <img src="./images/footer_2.webp" width="400px">
+                <a href="#">
+                    <h5><i>Bánh dinh dưỡng tốt cho sức khoẻ </i></h5>
+                </a>
+                <p> Giáng sinh luôn là thời gian " lấp lánh " nhất trong năm , cũng là lúc tâm hồn con người được " thắp
+                </p>
+                <p>sáng " bởi bầu không khí rộn ràng, vui tươi giữa trời đông lạnh giá.</p>
+                <p>Tại Anh Hòa Bakery những thứ " lấp lánh" luôn là những chiếc bánh mang tình thần Giáng Sinh.</p>
+            </div>
+            <div class="col">
+                <img src="./images/footer_3.webp" width="400px">
+                <a href="#">
+                    <h5><i>Bánh mới ra mắt trong 2023 </i></h5>
+                </a>
+                <p> Anh Hòa Bakery là thương hiệu bánh ngọt Pháp của công ty cổ phần bánh</p>
+                <p>ngọt Anh Hòa. Được thành lập từ năm 2004 tại con phố Ngõ Trạm, quận Hoàn</p>
+                <p>Kiếm, Hà Nội. Trải qua hơn 15 năm phát triển, đến nay Anh Hòa Bakery đã có 13</p>
+                <p>cơ sở kinh doanh đặt trên những tuyến phố đông dân cư ở Hà Nội.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col-lg-1">
+
+            </div>
+            <div class="col-lg-2">
+                <img src="./images/logo-footer.webp">
+                <br>
+                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                Số 09 Trần Thái Tông, P. Dịch Vọng, Q. Cầu Giấy, TP. Hà Nội
+                <br>
+                <i class="fa-solid fa-mobile-screen-button" style="color: #ffffff;"></i>
+                <a href="#">0905985781</a>
+                <br>
+                <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                <a href="mailto:info@anhhoabakery.vn">info@anhhoabakery.vn</a>
+            </div>
+            <div class="col-lg-2">
+                <h3><i>ChÍNH SÁCH</i></h3>
+                <br>
+                <br>
+                <a href="#">Chính sách và quy định chung</a>
+                <br>
+                <br>
+                <a href="#">Chính sách giao dịch && Thanh toán</a>
+                <br>
+                <br>
+                <a href="#">Chính sách đổi Trải</a>
+                <br>
+                <br>
+                <a href="#">Chính sách bảo mật</a>
+            </div>
+            <div class="col-lg-3">
+                <h3><i>ANH HOÀ BARKEY</i></h3>
+                <br>
+                <p>
+                    Tên đơn vị: Công ty Cổ phần Bánh ngọt Anh Hòa
+                    Số giấy chứng nhận đăng ký kinh doanh: 0104802706
+                    Ngày cấp: 21/07/2010
+                    Nơi cấp: Sở Kế hoạch và Đầu tư Tp. Hà Nội
+                </p>
+                <br>
+                <input type="email" required="" value="" placeholder="Nhập email của bạn..." name="contact[email]"
+                    id="Email" class="input-group-field" aria-label="email@example.com">
+                <a href="#"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i></a>
+            </div>
+            <div class="col-lg-3">
+                <h4>
+                    Mỗi tháng chúng tôi đều có những đợt giảm giá dịch vụ và sản phẩm nhằm tri ân khách hàng. Để có thể
+                    cập nhật kịp thời những đợt giảm giá này, vui lòng nhập địa chỉ email của bạn vào ô dưới đây
+                </h4>
+                <img src="./images/footer_01.webp">
+            </div>
+            <div class="col-lg-1">
+
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+<script src="Cart.js"></script>
+<script src="./DBproduct.js"></script>
+<script>
+    const userLogin = JSON.parse(localStorage.getItem("userLogin"));
+
+    const navElement = document.querySelector("nav");
+
+    if (userLogin) {
+        const contentNav = `
+      <div class="logo">
+        <img src="./images/logo-header.png" alt="" width="100" />
+      </div>
+      <div class="navbar-feature">
+        <div class="user-info">${userLogin.userName}</div>
+        <div class="navbar-btn">
+         
+          <button class="btn-log out" onclick = "handleLogout()" id = "logout-button">Đăng xuất</button>
+      
+        </div>
+      </div>
+`;
+        navElement.innerHTML = contentNav;
+
+        navElement;
+    }
+
+    function handleLogout() {
+        localStorage.removeItem("userLogin");
+        window.location = "indexlg.html"
+    }
+
+    const productDB = JSON.parse(localStorage.getItem("product"));
+    renderProducts(productDB);
+    function renderProducts(productDB) {
+        const productUsers = document.querySelector('.renderProduct');
+
+        let content = "";
+        productDB.forEach((product,index) => {
+            content += `<div class="col product">
+                    <img src="${product.avt_image}" width="300px">
+                    <h4><button onclick = "handleViewDetail('${product.id}')" id="btn-button-item">${product.name}</button></h4>
+                    <button onclick = "handleViewDetail('${product.id}')" id="btn-CT">Xem chi tiết</button>
+                    <p>${index + 1}</p>
+                    <p><span>${product.price}</span>đ</p>
+                    <input type="number" name="soluong" min="1" max="100" value="1">
+                    <button onclick="handleAddToCart('${product.id}')"><i class="fa-solid fa-cart-arrow-down"
+                            style="color: #6e2e7f;"></i></button>
+                </div>`
+                console.log(product.id);
+        });
+        productUsers.innerHTML = content
+    }
+    function handleViewDetail(id) {
+        window.location = `reviewProduct.html?idProduct=${id}`
+    }
+
+    
+    
+</script>
+</body>
+
+</html>

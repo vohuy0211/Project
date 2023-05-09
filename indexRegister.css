@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+#form-register {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    
+}
+#form-input {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    row-gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+
+}
+#form-input>p {
+    grid-column: 1 3;
+}
+#form-input>input {
+    padding: 10px;
+    
+}
+#input-submit {
+    background-color: #5B3236;
+    padding: 10px;
+    margin: auto 0;
+    width: 30%;
+    color: white;
+}
+.makeup button {
+    background-color: rgb(76, 76, 167);
+    font-size: 30px ;
+    border-radius: 40px;
+    width: 90%;
+    height: 50px;
+}
+#input-submit:hover {
+    
+    background-color: #190B0B;
+}
+p {
+    color: red;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: #5B3236;
+}
+a:hover {
+    color: #B18B86;
+}
